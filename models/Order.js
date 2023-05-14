@@ -13,7 +13,9 @@ const schema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Pizza",
   },
-  size_crust: [{ type: Array }],
+  size_crust: {
+    type: String,
+  },
   price: {
     type: String,
   },

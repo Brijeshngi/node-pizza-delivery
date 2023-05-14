@@ -4,13 +4,16 @@ import validator from "validator";
 const schema = mongoose.Schema({
   name: {
     type: String,
+    required: true,
   },
   email: {
     type: String,
+    required: true,
     validate: validator.isEmail,
   },
   contact: {
     type: String,
+    required: true,
   },
   Avatar: {
     public_id: {
@@ -24,13 +27,14 @@ const schema = mongoose.Schema({
   },
   address: {
     type: String,
+    required: true,
   },
   order_delivered: {
     orderId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Order",
     },
-    status: {
+    order_status: {
       type: String,
     },
   },

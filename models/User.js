@@ -14,8 +14,8 @@ const schema = mongoose.Schema({
     required: true,
   },
   city: {
-    type: String,
-    required: true,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "City",
   },
   address: {
     type: String,
