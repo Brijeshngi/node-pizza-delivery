@@ -18,16 +18,13 @@ const schema = mongoose.Schema({
   Avatar: {
     public_id: {
       type: String,
-      required: true,
     },
     url: {
       type: String,
-      required: true,
     },
   },
   address: {
     type: String,
-    required: true,
   },
   order_delivered: {
     orderId: {

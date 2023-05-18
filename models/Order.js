@@ -25,23 +25,29 @@ const schema = mongoose.Schema({
   },
   payment_status: {
     type: String,
+    enum: ["Pending", "Paid"],
+    default: "Pending",
   },
   status: {
     type: String,
     enum: [
-      "pending",
+      "ordered",
       "confirm",
       "on the way",
       "arriving",
       "delivered",
       "cancelled",
     ],
+    default: "ordered",
   },
+
   refund_status: {
     type: String,
     enum: ["Pending", "refunded", "Cancelled"],
   },
+
   tracking_details: [{ type: Array }],
+
   // pointOne, pointTwo, pointThree, ....n => n rows with details
 });
 
