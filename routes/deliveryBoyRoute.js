@@ -4,7 +4,7 @@ import {
   editDeliveryBoy,
   orderDelivered,
   updateStatus,
-} from "../controllers/deliveryBoyController";
+} from "../controllers/deliveryBoyController.js";
 
 const router = express.Router();
 
